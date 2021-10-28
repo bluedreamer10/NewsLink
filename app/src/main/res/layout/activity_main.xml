@@ -26,65 +26,72 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@id/recyclerView">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnIndia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="HEADLINES"
             android:layout_marginLeft="20dp"
+            android:background="@drawable/oval"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnBusiness"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:text="BUSINESS"
+            android:background="@drawable/oval"
             app:layout_constraintLeft_toRightOf="@id/btnIndia"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnTech"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:text="Technology"
+            android:background="@drawable/oval"
             app:layout_constraintLeft_toRightOf="@id/btnBusiness"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-        android:id="@+id/btnEntertainment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:text="Entertainment"
-        app:layout_constraintLeft_toRightOf="@id/btnTech"
-        app:layout_constraintTop_toTopOf="parent" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnEntertainment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/oval"
+            android:layout_marginLeft="20dp"
+            android:text="Entertainment"
+            app:layout_constraintLeft_toRightOf="@id/btnTech"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnHealth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/oval"
             android:layout_marginLeft="20dp"
             android:text="Health"
             app:layout_constraintLeft_toRightOf="@id/btnEntertainment"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnScience"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:text="Science"
+            android:background="@drawable/oval"
             app:layout_constraintLeft_toRightOf="@id/btnHealth"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnSports"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:text="Sports"
+            android:background="@drawable/oval"
             app:layout_constraintLeft_toRightOf="@id/btnScience"
             app:layout_constraintTop_toTopOf="parent" />
 

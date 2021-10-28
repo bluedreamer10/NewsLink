@@ -44,7 +44,7 @@
                 app:layout_constraintTop_toBottomOf="@id/image"/>
 
             <TextView
-                android:id="@+id/author"
+                android:id="@+id/authortextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TextView"

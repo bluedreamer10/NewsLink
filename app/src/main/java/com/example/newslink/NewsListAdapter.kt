@@ -1,6 +1,7 @@
 package com.example.newslink
 
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,7 +25,10 @@ class NewsListAdapter(val listener: NewsItemClicked): RecyclerView.Adapter<NewsV
     override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
         val currentItem = items[position]
         holder.titleView.text = currentItem.title
-        holder.author.text = currentItem.author
+
+        if (currentItem.author != "") {
+            holder.author.text = currentItem.author
+        }
         Glide.with(holder.itemView.context).load(currentItem.imageUrl).into(holder.image)
 
     }
@@ -33,6 +37,7 @@ class NewsListAdapter(val listener: NewsItemClicked): RecyclerView.Adapter<NewsV
         return items.size
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun updateNews(updatedNews: ArrayList<News>){
         items.clear()
         items.addAll(updatedNews)
@@ -44,7 +49,7 @@ class NewsListAdapter(val listener: NewsItemClicked): RecyclerView.Adapter<NewsV
 class NewsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     val titleView : TextView = itemView.findViewById(R.id.title)
     val image : ImageView = itemView.findViewById(R.id.image)
-    val author: TextView = itemView.findViewById(R.id.author)
+    val author: TextView = itemView.findViewById(R.id.authortextView)
 }
 
 interface NewsItemClicked {

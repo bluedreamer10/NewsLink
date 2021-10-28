@@ -11,6 +11,7 @@ import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.item_news.*
 
 class MainActivity : AppCompatActivity(), NewsItemClicked {
     private lateinit var mAdapter: NewsListAdapter
@@ -63,9 +64,7 @@ class MainActivity : AppCompatActivity(), NewsItemClicked {
 
     private fun fetchDataIndia() {
 
-        var url = "https://newsapi.org/v2/top-headlines?country=in&apiKey=c92e05934e5c48a1a1878076909b601a"
-
-
+        val url = "https://newsapi.org/v2/top-headlines?country=in&apiKey=c92e05934e5c48a1a1878076909b601a"
         val jsonObjectRequest = object :JsonObjectRequest(Request.Method.GET, url, null,
 
             { response ->
@@ -102,7 +101,7 @@ class MainActivity : AppCompatActivity(), NewsItemClicked {
     }
     private fun fetchDataTech() {
 
-        var url = "https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=c92e05934e5c48a1a1878076909b601a"
+        val url = "https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=c92e05934e5c48a1a1878076909b601a"
 
 
         val jsonObjectRequest = object :JsonObjectRequest(Request.Method.GET, url, null,
