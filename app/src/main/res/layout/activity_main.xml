@@ -47,7 +47,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnTech"
-            android:layout_width="wrap_content"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:text="Technology"
@@ -57,7 +57,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnEntertainment"
-            android:layout_width="wrap_content"
+            android:layout_width="135dp"
             android:layout_height="wrap_content"
             android:background="@drawable/oval"
             android:layout_marginLeft="20dp"
