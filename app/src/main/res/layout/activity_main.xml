@@ -7,6 +7,16 @@
     tools:context=".MainActivity"
     android:background="@color/black">
 
+    <ProgressBar
+        android:id="@+id/loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="gone"/>
+
 <HorizontalScrollView
     android:id="@+id/scrollView"
     android:layout_width="match_parent"
@@ -20,6 +30,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -35,6 +46,17 @@
             android:background="@drawable/oval"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnEntertainment"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/oval"
+            android:text="Entertainment"
+            app:layout_constraintLeft_toRightOf="@id/btnTech"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnBusiness"
             android:layout_width="wrap_content"
@@ -53,16 +75,6 @@
             android:text="Technology"
             android:background="@drawable/oval"
             app:layout_constraintLeft_toRightOf="@id/btnBusiness"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnEntertainment"
-            android:layout_width="135dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/oval"
-            android:layout_marginLeft="20dp"
-            android:text="Entertainment"
-            app:layout_constraintLeft_toRightOf="@id/btnTech"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -102,12 +114,15 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
+        android:layout_marginTop="10dp"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/scrollView"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:listitem="@layout/item_news"/>
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scrollView"
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/item_news" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

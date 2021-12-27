@@ -29,8 +29,13 @@ class NewsListAdapter(val listener: NewsItemClicked): RecyclerView.Adapter<NewsV
         if (currentItem.author != "") {
             holder.author.text = currentItem.author
         }
-        Glide.with(holder.itemView.context).load(currentItem.imageUrl).into(holder.image)
 
+        if (currentItem.imageUrl != "") {
+            Glide.with(holder.itemView.context).load(currentItem.imageUrl).into(holder.image)
+        }
+        else{
+            holder.image.setImageResource(R.drawable.errorimage)
+        }
     }
 
     override fun getItemCount(): Int {
